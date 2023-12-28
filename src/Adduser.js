@@ -37,7 +37,7 @@ function Adduser() {
     onSubmit: async (values) => {
       try {
         const userdata = await axios.post(
-          "https://63e61d3483c0e85a868ce98f.mockapi.io/api/v1/users",
+          "https://jsonplaceholder.typicode.com/users",
           values
         );
         alert("Success");

@@ -16,7 +16,7 @@ function Home() {
   let fetchData = async () => {
     try {
       const result = await axios.get(
-        "https://63e61d3483c0e85a868ce98f.mockapi.io/api/v1/users/"
+        "https://jsonplaceholder.typicode.com/users/"
       );
       console.log(result);
       setUsers(result.data);
@@ -29,7 +29,7 @@ function Home() {
     try {
       setLoading(true);
       const ef = await axios.delete(
-        `https://63e61d3483c0e85a868ce98f.mockapi.io/api/v1/users/${e}`
+        `https://jsonplaceholder.typicode.com/users/${e}`
       );
       alert("Deleted");
       fetchData();

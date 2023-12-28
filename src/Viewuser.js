@@ -15,7 +15,7 @@ function Viewuser() {
     try {
       setLoading(true);
       const user = await axios.get(
-        `https://63e61d3483c0e85a868ce98f.mockapi.io/api/v1/users/${params.id}`
+        `https://jsonplaceholder.typicode.com/users/${params.id}`
       );
       setUsers(user.data);
       setLoading(false);

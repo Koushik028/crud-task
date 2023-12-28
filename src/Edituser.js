@@ -210,7 +210,7 @@ function Edituser() {
   onSubmit: async (values) => {
     try {
       const user = await axios.put(
-        `https://63e61d3483c0e85a868ce98f.mockapi.io/api/v1/users/${params.id}`,
+        `https://jsonplaceholder.typicode.com/users/${params.id}`,
         values
        
       );
@@ -225,7 +225,7 @@ function Edituser() {
   useEffect(() => {
     let fetchData = async () =>{
       try{
-        const user = await axios.get(`https://63e61d3483c0e85a868ce98f.mockapi.io/api/v1/users/${params.id}`)
+        const user = await axios.get(`https://jsonplaceholder.typicode.com/users/${params.id}`)
         formik.setValues(user.data)
       }
       catch (error){
